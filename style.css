@@ -1,0 +1,203 @@
+body {
+  font-family: Arial, sans-serif;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 20px;
+
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  min-height: 100vh;
+
+  color: #333;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+
+  border-radius: 10px;
+
+  padding: 20px;
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  text-align: center;
+
+  color: #333;
+
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+
+  margin-bottom: 20px;
+
+  gap: 10px;
+}
+
+#task-input {
+  flex: 1;
+
+  padding: 10px;
+
+  font-size: 16px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 20px;
+
+  outline: 4px solid #ccc;
+}
+
+#task-input:focus {
+  border-color: #667eea;
+}
+
+#add-btn {
+  padding: 10px 20px;
+
+  font-size: 16px;
+
+  background-color: #4caf50;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+}
+
+#add-btn:hover {
+  background-color: #1b8b20;
+}
+
+ol {
+  list-style-type: decimal;
+
+  padding: 0;
+}
+
+li {
+  background-color: white;
+
+  margin-bottom: 10px;
+
+  padding: 15px 15px 15px 40px;
+  /* add left padding for list marker */
+
+  border-radius: 8px;
+
+  display: block;
+  /* change from flex to block to show list marker */
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  transition: transform 0.2s;
+
+  max-height: 30vh;
+
+  overflow-x: hidden;
+
+  overflow:scroll;
+}
+
+li:hover {
+  transform: translateY(-2px);
+}
+
+.task-content {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.task-text {
+  font-size: 16px;
+
+  margin-bottom: 5px;
+}
+
+.timestamp {
+  font-size: 12px;
+
+  color: #666;
+}
+
+.completed {
+  text-decoration: line-through;
+
+  color: #888;
+}
+
+.complete-btn,
+.delete-btn {
+  padding: 8px 12px;
+
+  margin-left: 5px;
+
+  border: none;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  transition: background-color 0.3s;
+}
+
+.complete-btn {
+  background-color: #2196f3;
+
+  color: white;
+}
+
+.complete-btn:hover {
+  background-color: #0b7dda;
+}
+
+.delete-btn {
+  background-color: #f44336;
+
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #da190b;
+}
+
+@media (max-width: 768px) {
+  .input-container {
+    flex-direction: column;
+  }
+
+  li {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .complete-btn,
+  .delete-btn {
+    margin-top: 10px;
+
+    margin-left: 0;
+  }
+}
